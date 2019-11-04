@@ -4,3 +4,4 @@ log/
 save/
 __pycache__/
 alfred/
+.idea/
