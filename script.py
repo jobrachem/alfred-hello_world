@@ -1,17 +1,16 @@
-# -*- coding:utf-8 -*-
+import alfred
+import alfred.page as p
+import alfred.element as e
 
-from alfred.page import WebCompositePage
-from alfred import Experiment, run
 
+def generate_experiment(self, path):
+    hello_world = p.WebCompositePage(title="Hello, world!")
+    text_entry = e.TextEntryElement("Please enter some text.")
+    hello_world.append(text_entry)
 
-def generate_experiment():
-    # Create content
-    hello_world = WebCompositePage(title="Hello, world!")
-
-    # Create experiment
-    exp = Experiment()
+    exp = alfred.Experiment()
     exp.append(hello_world)
     return exp
 
 
-run(generate_experiment)
+alfred.run(generate_experiment)
