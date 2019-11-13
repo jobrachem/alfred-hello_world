@@ -18,3 +18,6 @@ You need to have Alfred v0.3b1 installed ([Alfred on GitHub](https://github.com/
  ```bash
  python run.py
  ```
+
+ A browser window should open up with the following content:
+ ![Alfred hello world experiment](alfred-hello_world.png)
