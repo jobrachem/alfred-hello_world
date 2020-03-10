@@ -1,22 +1,22 @@
 # Alfred "Hello World" experiment
- A minimal "hello world" Alfred experiment for demonstration and testing procedures.
+ A minimal "hello world" Alfred experiment.
 
-This version of the "hello world" experiment is compatible with the current Alfred development version.
+## Starting the experiment
 
- ## Starting the experiment
-
-You need to have Alfred v0.3b1 (development version) installed ([Alfred on GitHub](https://github.com/ctreffe/alfred)).
+You need to have Alfred installed ([Alfred on GitHub](https://github.com/ctreffe/alfred)).
 
  1. Download and unpack or clone the repository.
- 
+
  2. Open a terminal window and switch to the experiment directory
  
  ```bash 
  cd PATH-TO-EXPERIMENT
  ```
  
- 2. Run the experiment by executing the following code in a terminal window
+ 3. Run the experiment by executing the following code in a terminal window
 
  ```bash
- python script.py
+ python run.py
  ```
+
+ Your programming takes place in `script.py`, metadata like experiment author, title, etc. should be entered in `config.conf`. Generally, for normal use cases you should not change `run.py`.
