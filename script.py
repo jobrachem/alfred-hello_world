@@ -1,16 +1,20 @@
-import alfred
-import alfred.page as p
-import alfred.element as e
+from alfred import Experiment
+from alfred.page import Page
+import alfred.element as elm
+import alfred.section as sec
 
+class HelloWorld(Page):
+    def on_showing(self):
+        hello_text = elm.TextEntryElement('Please enter some text.')
+        self.append(hello_text)
 
-def generate_experiment(self, path):
-    hello_world = p.WebCompositePage(title="Hello, world!")
-    text_entry = e.TextEntryElement("Please enter some text.")
-    hello_world.append(text_entry)
+def generate_experiment(self, config):
+    exp = Experiment(config=config)
 
-    exp = alfred.Experiment()
-    exp.append(hello_world)
+    hello_world = HelloWorld(title='Hello, world!')
+
+    main = sec.Section()
+    main.append(hello_world)
+
+    exp.append(main)
     return exp
-
-
-alfred.run(generate_experiment)
