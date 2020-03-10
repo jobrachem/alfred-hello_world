@@ -13,7 +13,7 @@ You need to have Alfred v0.3b1 installed ([Alfred on GitHub](https://github.com/
  cd PATH-TO-EXPERIMENT
  ```
  
- 2. Run the experiment by executing the following code in a terminal window
+ 3. Run the experiment by executing the following code in a terminal window
 
  ```bash
  python run.py
