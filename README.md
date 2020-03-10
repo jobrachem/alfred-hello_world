@@ -20,3 +20,6 @@ You need to have Alfred installed ([Alfred on GitHub](https://github.com/ctreffe
  ```
 
  Your programming takes place in `script.py`, metadata like experiment author, title, etc. should be entered in `config.conf`. Generally, for normal use cases you should not change `run.py`.
+
+ When executing `run.py`, a browser window should open up with the following content:
+ ![Alfred hello world experiment](alfred-hello_world.png)
