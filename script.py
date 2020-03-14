@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from alfred import Experiment
 from alfred.page import Page
 import alfred.element as elm
