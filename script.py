@@ -1,23 +1,23 @@
-# -*- coding:utf-8 -*-
-
-from alfred.page import WebCompositePage
+# -*- coding: utf-8 -*-
 from alfred import Experiment
-
-EXP_TYPE = "web"
-EXP_NAME = "template"
-EXP_VERSION = "0.1"
-EXP_AUTHOR_MAIL = "your@email.com"
-
-class Script(object):
-
-    def generate_experiment(self):
-        
-        page01 = WebCompositePage(title="Hello, world!")
-
-        exp = Experiment(EXP_TYPE, EXP_NAME, EXP_VERSION, EXP_AUTHOR_MAIL)
-        exp.page_controller.append_items(page01)
-
-        return exp
+from alfred.page import Page
+import alfred.element as elm
+import alfred.section as sec
 
 
-generate_experiment = Script().generate_experiment
+class HelloWorld(Page):
+    def on_showing(self):
+        hello_text = elm.TextEntryElement('Please enter some text.')
+        self.append(hello_text)
+
+
+def generate_experiment(self, config):
+    exp = Experiment(config=config)
+
+    hello_world = HelloWorld(title='Hello, world!')
+
+    main = sec.Section()
+    main.append(hello_world)
+
+    exp.append(main)
+    return exp
