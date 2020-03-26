@@ -1,4 +1,5 @@
 # Alfred "Hello World" experiment
+
  A minimal "hello world" Alfred experiment.
 
 ## Starting the experiment
