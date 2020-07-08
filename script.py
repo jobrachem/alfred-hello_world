@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
-import alfred.element as elm
-import alfred.section as sec
-from alfred import Experiment
-from alfred.page import Page
+from alfred3 import Experiment
+from alfred3.page import Page
+
+import alfred3.section as sec
+import alfred3.element as elm
 
 
 class HelloWorld(Page):
