@@ -7,19 +7,20 @@ import alfred3.element as elm
 
 
 class HelloWorld(Page):
-    def on_showing(self):
-        hello_text = elm.TextEntryElement("Please enter some text.")
+    title = "Hello, world!"
 
-        self.append(hello_text)
+    def on_exp_access(self):
+        self += elm.TextEntryElement("Please enter some text.")
+
+
+class MainSection(sec.SegmentedSection):
+    def on_exp_access(self):
+        self += HelloWorld()
 
 
 def generate_experiment(self, config):
+
     exp = Experiment(config=config)
+    exp += MainSection()
 
-    hello_world = HelloWorld(title="Hello, world!")
-
-    main = sec.Section()
-    main.append(hello_world)
-
-    exp.append(main)
     return exp
